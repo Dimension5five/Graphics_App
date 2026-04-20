@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiMediaGraphics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-screen">
+        <div class="container glass-effect">
+            <h1>MultiMediaGraphics</h1>
+            
+            <div class="input-group">
+                <label for="functionInput">y = </label>
+                <input type="text" id="functionInput" value="sin(x) * exp(-0.1 * x)">
+                <button id="plotButton">Построить</button>
+            </div>
+
+            <div id="plotContainer"></div>
+            
+            <div id="aiChat">
+                <div id="chatHistory"></div>
+                <div class="chat-input-group">
+                    <input type="text" id="aiInput" placeholder="Опиши функцию словами...">
+                    <button id="aiSubmit">Сгенерировать</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">Листайте вниз для инструкции ↓</div>
+    </div>
+
+    <section class="docs-section">
+        <div class="docs-content">
+            <h3>Справочник функций</h3>
+            <div class="hint-grid">
+                <div class="hint-item">
+                    <h4>Операторы</h4>
+                    <p><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>^</code> (степень)</p>
+                </div>
+                <div class="hint-item">
+                    <h4>Тригонометрия</h4>
+                    <p><code>sin(x)</code>, <code>cos(x)</code>, <code>tan(x)</code>, <code>asin(x)</code></p>
+                </div>
+                <div class="hint-item">
+                    <h4>Логарифмы и экспоненты</h4>
+                    <p><code>log(x)</code>, <code>exp(x)</code>, <code>log10(x)</code></p>
+                </div>
+                <div class="hint-item">
+                    <h4>Константы и прочее</h4>
+                    <p><code>pi</code>, <code>e</code>, <code>sqrt(x)</code>, <code>abs(x)</code></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="music-section">
+        <div id="musicControl">
+            <div id="trackInfo">Загрузка плейлиста...</div>
+            <button id="saveTrackBtn">📥 Скачать текущий трек</button>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    
+    <script src="app.js"></script>
+
+    
+</body>
+</html>
